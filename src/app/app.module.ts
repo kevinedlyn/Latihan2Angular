@@ -14,7 +14,7 @@ const ROUTES:Routes = [
   {path:'input', component : InputComponent},
   {path:'edit', component : EditComponent},
   {path:'list', component: ListComponent},
-  {path:'list/:nama', component : ListComponent}
+  {path:'list/:namajurusan/:deskripsijurusan', component : ListComponent}
 ]
 
 @NgModule({

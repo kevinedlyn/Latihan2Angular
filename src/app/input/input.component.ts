@@ -16,6 +16,6 @@ export class InputComponent implements OnInit {
 
   submit()
   {
-    this.router.navigate(['/list', 'coba']);
+     this.router.navigate(['/list', this.namajurusan, this.deskripsijurusan]);
   }
 }

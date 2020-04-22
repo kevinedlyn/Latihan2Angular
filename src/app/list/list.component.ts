@@ -10,12 +10,17 @@ export class ListComponent implements OnInit {
 
   constructor(private route : ActivatedRoute) { }
 
-  namajurusan = '';
-  penjelasan = '';
+  temp = '';
+  data : String[];
 
   ngOnInit() {
-    let nama = this.route.snapshot.paramMap.get('nama');
-    this.namajurusan = nama;
+    this.temp="";
+    this.temp = this.temp + "Jurusan : ";
+    let nama = this.route.snapshot.paramMap.get('namajurusan');
+    this.temp = this.temp + nama;
+    this.temp = this.temp + " ,Penjelasan : ";
+    let des = this.route.snapshot.paramMap.get('deskripsijurusan');
+    this.temp = this.temp + des;
+    this.data.push(this.temp);
   }
-
 }
